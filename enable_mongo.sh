@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 # Solution by Nicola Del Gobbo
 echo '[Unit]
 Description=High-performance, schema-free document-oriented database

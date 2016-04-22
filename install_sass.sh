@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 # Installs Sass/Compass for Ubuntu 15.10
 echo "Updating packages..."
 sudo apt-get update -yqq

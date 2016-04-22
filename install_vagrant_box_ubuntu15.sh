@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 # This script is a fix/workaround for Ubuntu 15.x
 # - Enables adding vagrant box

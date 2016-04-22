@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 # Solution by Anthony Akentiev:
 wget https://npmjs.org/install.sh
