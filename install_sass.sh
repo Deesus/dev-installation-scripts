@@ -7,6 +7,8 @@ sudo apt-get -yqq update
 echo "Updating Ruby/Rubygems..."
 sudo apt-get -yqq install --only-upgrade ruby
 sudo apt-get -yqq install --only-upgrade rubygems
+echo "Installing ruby-dev..."
+sudo apt-get install ruby-dev -q
 
 # Install Sass:
 echo "Installing Sass..."
