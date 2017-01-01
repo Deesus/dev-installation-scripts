@@ -1,14 +1,8 @@
 #!/bin/sh
 
-# Solution by Anthony Akentiev:
-wget https://npmjs.org/install.sh
-chmod +x install.sh
-sudo ./install.sh
+# Install NodeJS 7.x
+curl -sL https://deb.nodesource.com/setup_7.x | sudo -E bash -
+sudo apt-get install -y nodejs
 
-# Solution by David Walsh:
-sudo npm cache clean -f
-sudo npm install -g n
-sudo n stable
-
-# Install Express.js:
+# Install ExpressJS
 sudo npm install -g express-generator
