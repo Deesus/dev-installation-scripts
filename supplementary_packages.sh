@@ -1,16 +1,18 @@
+#!/bin/bash
+
 # Some (opiniated) recommended packages for Debian/Ubuntu/Mint based distros.
 
 # N.b. git is not preinstalled in some Debian/Ubuntu/Mint distros:
-echo -e "Installing git...\n"
+echo "Installing git...\n"
 sudo apt install git
 
 # Install apt-get wrappers:
-echo -e "Installing package managers...\n"
+echo "Installing package managers...\n"
 sudo apt-get install aptitude -y
 sudo apt-get install synaptic -y
 
 # Install important Python packages:
-echo -e "Installing important Python packages...\n"
+echo "Installing important Python packages...\n"
 sudo apt-get install python-pip -y
 pip install --upgrade pip
 pip install venv
