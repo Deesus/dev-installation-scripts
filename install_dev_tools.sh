@@ -1,19 +1,30 @@
 #!/bin/bash
-# Note: assumes npm is installed
+
+echo -e "\nUpdating packages..."
+sudo apt-get update
+
+################# Node #################
+# Install Node, NPM, and front-end task runners
+
+# Install NodeJS 7.x
+echo -e "\nInstalling NodeJS 7 and NPM..."
+curl -sL https://deb.nodesource.com/setup_7.x | sudo -E bash -
+sudo apt-get install -y nodejs
+
+# Install ExpressJS
+echo -e "\nInstalling ExpressJS..."
+sudo npm install -g express-generator
 
 # Install Grunt cli:
+echo -e "\nInstalling Grunt..."
 sudo npm install -g grunt-cli
 
 # Install Gulp cli:
+echo -e "\nInstalling Gulp..."
 sudo npm install -g gulp-cli
 
-# Install GraphicsMagick:
-# GraphicsMagick works well with grunt-responsive-images or Imager.js
-sudo apt-get install -qqy graphicsmagick
-
-# Installs Sass/Compass for Ubuntu 15.10
-echo -e "\nUpdating packages..."
-sudo apt-get update
+################# Front-end tools #################
+# Install Sass/Compass, GraphicsMagick
 
 # N.b. Ruby and Rubygems should already be preinstalled in recent versions of Ubuntu
 echo -e "\nUpdating Ruby/Rubygems..."
@@ -35,6 +46,14 @@ sudo gem install compass
 # Update installed gems:
 echo -e "\nUpdating gems..."
 sudo gem update
+
+# Install GraphicsMagick:
+# GraphicsMagick works well with grunt-responsive-images or Imager.js
+echo -e "\nInstalling GraphicsMagick..."
+sudo apt-get install graphicsmagick -y
+
+################# Java #################
+# Install JDK
 
 # Install Open JDK 8:
 echo -e "\nInstalling Open JDK 8..."
