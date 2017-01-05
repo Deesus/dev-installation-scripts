@@ -53,9 +53,15 @@ echo "\nInstalling GraphicsMagick..."
 sudo apt-get install graphicsmagick -y
 
 ################# Java #################
-# Install JDK
 
 # Install Open JDK 8:
 echo "\nInstalling Open JDK 8..."
 sudo apt-get install openjdk-8-jdk -y
 
+################# Python #################
+
+# Install important Python packages:
+echo "Installing important Python packages...\n"
+sudo apt-get install python-pip -y
+pip install --upgrade pip
+pip install venv
