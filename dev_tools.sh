@@ -66,7 +66,12 @@ sudo apt-get install python-dev -yq	# for Python 2.7
 sudo apt-get install python3-dev -yq	# for Python 3.x
 
 # Install important Python packages:
-echo "\nInstalling important Python packages...\n"
+echo "\nInstalling important Python packages..."
 sudo apt-get install python-pip -yq
 pip install --upgrade pip
 pip install venv
+
+################# Misc. #################
+
+echo "\nInstalling Git..."
+sudo apt install git -yq
