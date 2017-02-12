@@ -18,5 +18,5 @@ This is a collection of shell scripts that install selected web dev packages and
 
 
 ### License:
-Apache 2 License.
+Copyright © 2017 Dee Reddy. BSD-2 License.
 
