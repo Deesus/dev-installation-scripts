@@ -67,6 +67,7 @@ sudo apt-get install python3-dev -yq	# for Python 3.x
 
 # Install important Python packages:
 echo "\nInstalling important Python packages..."
+sudo apt-get install python3-venv -yq	# venv for Debian/Ubuntu
 sudo apt-get install python-pip -yq
 pip install --upgrade pip
 pip install venv
