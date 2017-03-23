@@ -26,7 +26,7 @@ sudo npm install -g gulp-cli
 ################# Front-end tools #################
 # Install Sass/Compass, GraphicsMagick
 
-# N.b. Ruby and Rubygems should already be preinstalled in recent versions of Ubuntu
+# N.b. Ruby and Rubygems may already be preinstalled in modern Debian/Ubuntu versions:
 echo "\nUpdating Ruby/Rubygems..."
 sudo apt-get -y install --only-upgrade ruby
 sudo apt-get -y install --only-upgrade rubygems
@@ -48,9 +48,8 @@ echo "\nUpdating gems..."
 sudo gem update
 
 # Install GraphicsMagick:
-# GraphicsMagick works well with grunt-responsive-images or Imager.js
 echo "\nInstalling GraphicsMagick..."
-sudo apt-get install graphicsmagick -yq
+sudo apt-get install graphicsmagick -yq	# GraphicsMagick works well with grunt/gulp or Imager.js
 
 ################# Java #################
 
@@ -62,15 +61,22 @@ sudo apt-get install openjdk-8-jdk -yq
 
 # Install Python Dev Packages:
 echo "\nInstalling Python Dev..."
-sudo apt-get install python-dev -yq	# for Python 2.7
-sudo apt-get install python3-dev -yq	# for Python 3.x
+sudo apt-get install python-dev -yq	# for Python 2
+sudo apt-get install python3-dev -yq	# for Python 3
 
 # Install important Python packages:
 echo "\nInstalling important Python packages..."
 sudo apt-get install python3-venv -yq	# venv for Debian/Ubuntu
-sudo apt-get install python-pip -yq
+
+sudo apt-get install python3-tk -yq	# tkinter for Python 3
+sudo apt-get install python-tk -yq	# tkinter for Python 2
+
+sudo apt-get install python-pip -yq	# pip for Python 2
 pip install --upgrade pip
-pip install venv
+
+sudo apt-get install python3-setuptools -y	# pip for Python 3
+sudo easy_install3 pip
+
 
 ################# Misc. #################
 
