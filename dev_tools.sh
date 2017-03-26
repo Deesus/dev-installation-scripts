@@ -71,11 +71,13 @@ sudo apt-get install python3-venv -yq	# venv for Debian/Ubuntu
 sudo apt-get install python3-tk -yq	# tkinter for Python 3
 sudo apt-get install python-tk -yq	# tkinter for Python 2
 
-sudo apt-get install python-pip -yq	# pip for Python 2
+sudo apt-get install python-pip -yq		# pip for Python 2
 pip install --upgrade pip
 
 sudo apt-get install python3-setuptools -y	# pip for Python 3
 sudo easy_install3 pip
+
+pip install conda
 
 
 ################# Misc. #################
