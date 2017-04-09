@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# The following script sets up Selenium's webdriver (for Python)
+
 # ------------------------------
 # define variables:
 # ------------------------------
@@ -13,6 +15,13 @@ INSTALL_DIR="/home/.webdriver"
 # ------------------------------
 # main:
 # ------------------------------
+
+# install Python packages:
+apt-get install python3-dev -yq
+apt-get install python3-venv -yq
+apt-get install python-pip -yq
+pip install --upgrade pip
+pip install selenium -yp
 
 # download and extract webdrivers:
 wget -O ${DOWNLOAD_DIR}/geckodriver.tar.gz $GECKO_DRIVER_SRC_URI
@@ -29,3 +38,4 @@ mv ${DOWNLOAD_DIR}chromedriver $INSTALL_DIR
 echo "\n# Added webdrivers:"
 echo "PATH=\"$INSTALL_DIR:$PATH\"" >> ~/.bashrc
 
+source .bashrc
