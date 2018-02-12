@@ -8,18 +8,25 @@ sudo apt-get update
 # Install NodeJS and npm:
 echo "\nInstalling NodeJS and npm..."
 curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
-sudo apt-get install -y nodejs
+sudo apt-get install nodejs -y
 
 ################# Front-end tools #################
 
-# Install LESS:
-sudo npm install -g less -y
+# Install LESS (from npm):
+echo "\nInstalling LESS..."
+sudo npm install less -g
+
+# Install Vue.js (from npm):
+echo "\nInstalling Vue.js..."
+sudo npm install vue-cli -g
 
 # Install GraphicsMagick:
 echo "\nInstalling GraphicsMagick..."
 sudo apt-get install graphicsmagick -yq	# GraphicsMagick works well with grunt/gulp or Imager.js
 
 ################# Java #################
+# N.b. Open JDK already part of Kubuntu, others; so don't install
+# TODO: delete altogether?
 
 # Install Open JDK 8:
 #echo "\nInstalling Open JDK 8..."
