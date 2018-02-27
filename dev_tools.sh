@@ -12,6 +12,10 @@ sudo apt-get install nodejs -y
 
 ################# Front-end tools #################
 
+# Install Webpack-CLI (from npm):
+echo "\nInstalling webpack-cli..."
+sudo npm install -g webpack-cli -D --save
+
 # Install LESS (from npm):
 echo "\nInstalling LESS..."
 sudo npm install less -g
