@@ -3,6 +3,9 @@
 echo "\nUpdating packages..."
 sudo apt-get update
 
+echo "\nInstalling snap package manager..."
+sudo apt install snapd
+
 ################# NodeJS #################
 
 # Install NodeJS and npm:
@@ -60,6 +63,12 @@ sudo apt-get install python3-setuptools -y	# pip for Python 3
 sudo easy_install3 pip
 
 pip install conda
+
+################# JetBrains IDEs #################
+
+echo "\nInstalling WebStorm and PyCharm..."
+sudo snap install webstorm --classic
+sudo snap install pycharm-professional --classic
 
 
 ################# Misc. #################
