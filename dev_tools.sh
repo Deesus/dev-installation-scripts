@@ -3,33 +3,34 @@
 echo "\nUpdating packages..."
 sudo apt-get update
 
-echo "\nInstalling snap package manager..."
-sudo apt install snapd
 
 ################# NodeJS #################
 
 # Install NodeJS and npm:
-echo "\nInstalling NodeJS and npm..."
-curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
-sudo apt-get install nodejs -y
+echo "\nInstalling NodeJS (8.x LTS) and npm..."
+wget -qO- https://deb.nodesource.com/setup_8.x | sudo -E bash -
+sudo apt-get install -y nodejs
+
 
 ################# Front-end tools #################
 
+# TODO: install webpack locally instead:
 # Install Webpack-CLI (from npm):
-echo "\nInstalling webpack-cli..."
-sudo npm install -g webpack-cli -D --save
+# echo "\nInstalling webpack-cli..."
+# sudo npm install -g webpack-cli -D --save-dev
 
 # Install LESS (from npm):
 echo "\nInstalling LESS..."
-sudo npm install less -g
+sudo npm install less -g --save-dev
 
 # Install Vue.js (from npm):
 echo "\nInstalling Vue.js..."
-sudo npm install vue-cli -g
+sudo npm install vue-cli -g --save-dev
 
 # Install GraphicsMagick:
 echo "\nInstalling GraphicsMagick..."
 sudo apt-get install graphicsmagick -yq	# GraphicsMagick works well with grunt/gulp or Imager.js
+
 
 ################# Java #################
 # N.b. Open JDK already part of Kubuntu, others; so don't install
@@ -39,36 +40,24 @@ sudo apt-get install graphicsmagick -yq	# GraphicsMagick works well with grunt/g
 #echo "\nInstalling Open JDK 8..."
 #sudo apt-get install openjdk-8-jdk -yq
 
+
 ################# Python #################
 
+# TODO: Ubuntu 17+ has Python 3.6 preinstalled; perhaps we don't need much of this anymore: 
 # Install Python Dev Packages:
-echo "\nInstalling python-apt..."
-sudo apt-get install python-apt
+# echo "\nInstalling python-apt..."
+# sudo apt-get install python-apt
 
-echo "\nInstalling Python Dev..."
-sudo apt-get install python-dev -yq	# for Python 2
-sudo apt-get install python3-dev -yq	# for Python 3
+# echo "\nInstalling Python Dev..."
+# sudo apt-get install python-dev -yq	# for Python 2
+# sudo apt-get install python3-dev -yq	# for Python 3
 
 # Install important Python packages:
 echo "\nInstalling important Python packages..."
 sudo apt-get install python3-venv -yq	# venv for Debian/Ubuntu
+sudo apt-get install python3-pip -y	# pip for Python 3
 
-sudo apt-get install python3-tk -yq	# tkinter for Python 3
-sudo apt-get install python-tk -yq	# tkinter for Python 2
-
-sudo apt-get install python-pip -yq		# pip for Python 2
-pip install --upgrade pip
-
-sudo apt-get install python3-setuptools -y	# pip for Python 3
-sudo easy_install3 pip
-
-pip install conda
-
-################# JetBrains IDEs #################
-
-echo "\nInstalling WebStorm and PyCharm..."
-sudo snap install webstorm --classic
-sudo snap install pycharm-professional --classic
+# pip install conda
 
 
 ################# Misc. #################
