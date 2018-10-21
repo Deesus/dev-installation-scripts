@@ -11,6 +11,12 @@ echo "\nInstalling NodeJS (8.x LTS) and npm..."
 wget -qO- https://deb.nodesource.com/setup_8.x | sudo -E bash -
 sudo apt-get install -y nodejs
 
+# give user permission to delete:
+sudo chown -R $(whoami) ~/.npm
+
+# give user access to config:
+sudo chown -R $(whoami) ~/.config
+
 
 ################# Front-end tools #################
 
